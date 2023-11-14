@@ -1,0 +1,192 @@
+<div class="content">
+
+
+   <section>
+
+      <div>
+         <h1 style="color: white;">NO PAIN <span style="color:#dc3545 ;"> NO GAIN</span></h1>
+
+         <small>If you want something you've never had ,you must willing</small><br>
+         <small>to do something you've never done</small><br><br>
+         <small class="btn btn-danger" style="padding:5px 15px ;cursor: pointer; " (click)="openModal()">Join
+            Now</small>
+      </div>
+
+
+
+   </section>
+
+   <div class="landing">
+      <div class="row justify-content-center">
+         <div class="col-md-4">
+            <h1 class="text-center mt-5">Awesome Exercises You</h1>
+            <h1 class="text-center">Should Know</h1>
+
+
+         </div>
+
+      </div>
+      <div class="row justify-content-center mt-5">
+         <div class="col-md-8">
+            <input type="search" placeholder="   Search Exercises" style="width:85% ;height: 100%; padding:12px 20px ;"
+               [(ngModel)]="term">
+
+            <input type="submit" value="Search"
+               style="height:100%;width: 15%;  padding:0px 20px ; border: 1px solid red; background-color: #dc3545; font-weight: bold; color: whitesmoke;">
+         </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+         <div class=" cont-1 col-md-8 d-flex justify-content-around">
+            <div *ngFor="let Data of MainData">
+               <div style="margin:10px 10px  ; border:1px solid transparent">
+                  <h3 #temp class="text-center" style="background-color: black ; color:whitesmoke;padding: 10px 15px;"
+                     (click)="onSubmit(Data.bodyPart)">{{Data.bodyPart}}</h3>
+                  <img class="boxer-1" [src]="Data.imgUrl" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+   </div>
+
+   <!-- <div class="landing-2">
+      <div class="row">
+         <div class="col-md-3" style="padding-left:20px ;">
+            <h1
+               style="color:crimson ; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 30px; padding-left: 30px;  font-size: 50px; border-bottom: 3px solid black;">
+               Showing Result</h1>
+         </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+         <div class="col-md-10 d-flex flex-wrap justify-content-around">
+            <div *ngFor="let Data of landingData | filter:term">
+               <div style="margin:10px 10px  ; border:1px solid transparent">
+                  <h3 class="text-center" style="background-color: black ; color:whitesmoke">{{Data.bodyPart |
+                     uppercase}}</h3>
+                  <img [src]="Data.gifUrl" alt="" style="height:300px ; width:350px">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div> -->
+
+
+   <div class="main-2 " style="border:1px solid black">
+
+      <div class="box-1" style="height:60vh ;">
+
+         <div class="row justify-content-center">
+            <div class="circle-1">
+               <img
+                  src="https://tse3.mm.bing.net/th/id/OIP.H3Rfr54Gcr8JUSwhJvTMUgHaFs?w=285&h=219&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                  alt="" style="height:200px;width:200px; border-radius: 50%;">
+
+            </div>
+            <div class="circle-1">
+               <img
+                  src="https://tse3.mm.bing.net/th/id/OIP.AOwHUY3bcxxHvzAFWR0hlAAAAA?w=131&h=170&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                  alt="" style="height:200px;width:200px;border-radius: 50%; ">
+
+            </div>
+            <div class="circle-1">
+               <img
+                  src="https://tse1.mm.bing.net/th/id/OIP.0NGMsc1JzM5ls_KmSx4XuQHaHa?w=155&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                  alt="" style="height:200px;width:200px;border-radius: 50%;">
+
+            </div>
+         </div>
+
+
+      </div>
+
+      <div class="box-2" style="height:40vh; background-color:black  ;">
+         <div class="row justify-content-center">
+            <div class="col-md-4 justify-content-center" style="color:white ;padding: 20px 20px;">
+
+               <h1 class=" mt-2">ABOUT US</h1><br>
+               <small
+                  style="font-size:20px ; margin-top: 30px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">Lorem
+                  ipsum dolor sit, amet consectetur adipisicing elit. Officiis, quaerat error.
+                  Quidem quisquam qui fuga fugit numquam tenetur aut!
+                  Expedita delectus dicta ipsa pariatur vitae iste. Voluptatibus maxime beatae excepturi.</small>
+
+            </div>
+            <div class="col-md-4" style="color:white ;padding: 20px 20px;">
+
+               <h1 class=" mt-2">ADDRESS</h1>
+
+               <h5 style="margin-top: 30px; padding-left: 20px;">Pune, Maharashtra</h5><br>
+               <h5 style="padding-left:20px ;">Phone No : +919306993812</h5><br>
+               <h5 style="padding-left:20px ;">Email Address :vishal1vk6701@gmail.com</h5>
+
+            </div>
+            <div class="col-md-4" style="color:white ;padding: 20px 20px;">
+
+               <H1 class=" mt-2">CONTACT US</H1>
+               <div class="form- mt-2">
+                  <input type="email" placeholder="Email" class="form-control"><br>
+                  <input type="textarea" placeholder="message here" class="form-control">
+                  <input type="submit" value="Send Here"
+                     style="border:1px solid black ; padding:10px 20px; background-color:#dc3545;color:white; border-radius:20%; margin-top:20px;">
+               </div>
+
+            </div>
+            <hr style="color:white ;">
+            <small class="text-center" style="color:white ; font-size:26px;">@2023copyright |
+               Vishal</small>
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+</div>
+
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}"
+   style="margin-top:200px ; margin-left: 600px;">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background:white">
+         <div class="modal-header" style="background:crimson; color: white;padding: 15px 0px;">
+            <h4 class="modal-title text-center" style=" font-weight:620px;margin-left: 30px;">Join Here</h4>
+            <button type="button" style="margin-right:10px ;" class="close" (click)="onCloseHandled()"
+               aria-label="Close">
+               <span aria-hidden="true" style="padding:10px 20px ; color:black;">&times;</span>
+            </button>
+         </div>
+
+         <div class="modal-body"
+            style="height:28rem ; width:27rem; background-color: white; margin-left: 30px; padding: 10px 30px;">
+            <form>
+               <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" placeholder="Enter Your Name" class="form-control" ngModel>
+
+               </div>
+               <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="email" placeholder="Enter Your Email" class="form-control" ngModel>
+
+               </div>
+               <div class="form-group">
+                  <label for="">Password</label>
+                  <input type="password" placeholder="Enter Your Password" class="form-control" ngModel>
+
+               </div>
+               <div class="form-group">
+                  <input type="submit" value="Submit" class="btn btn-dark" style="padding: 5px 10px;">
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+</div>

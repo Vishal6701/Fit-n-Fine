@@ -1,0 +1,27 @@
+
+<div class="exercise">
+    <div class="row justify-content-center m-0" style="padding-top:50px ;">
+        <div class="col-md-8">
+            <input #temp type="search" placeholder="   Search Exercises" style="width:85% ;height: 100%; padding:12px 20px ;" [(ngModel)]="term">
+          
+            <input (click)="loadData(temp.value)" type="submit" value="Search"  style="height:100%;width: 15%;  padding:0px 20px ; border: 1px solid red; background-color: #dc3545; font-weight: bold; color: whitesmoke;" >
+        </div>
+     </div>
+
+     <div class="row justify-content-center mt-3">
+        <div class="col-md-10 d-flex flex-wrap justify-content-around">
+            <div  *ngFor="let Data of landingData |  paginate: { itemsPerPage: 8, currentPage: pages }">
+                <div class="box-1" style="margin:10px 10px  ; border:1px solid transparent">
+                <h3 #temp (click)="onSubmit(Data)" class="text-center" style="background-color: black ;cursor: pointer; color:whitesmoke">{{Data.target | uppercase}}</h3>
+                <img [src]="Data.gifUrl" alt="" style="height:220px ; width:300px">
+                </div>
+        </div>
+    </div> 
+
+    <div class="row justify-content-center" >
+            <div class="col-md-4 d-flex justify-content-end" style="background-color: grey ; color:white;">
+                <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+            </div>
+    </div>
+</div>
+
